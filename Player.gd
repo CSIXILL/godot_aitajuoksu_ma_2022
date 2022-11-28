@@ -36,6 +36,9 @@ func _physics_process(delta):
 	velocity.x = sideways * sidestep_speed
 	velocity.z = -run_speed
 	velocity = move_and_slide(velocity, Vector3.UP)
+	for index in range (get_slide_count()):
+		var collision = get_slide_collision(index)
+		var collision_object = collision.collider as CollisionObject
 
 func setup_jump(length: float, height: float, speed: float):
 	run_speed = speed
