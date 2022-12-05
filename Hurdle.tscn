@@ -12,6 +12,7 @@ mesh = ExtResource( 1 )
 material/0 = null
 
 [node name="StaticBody" type="StaticBody" parent="Fence"]
+collision_layer = 4
 
 [node name="CollisionShape" type="CollisionShape" parent="Fence/StaticBody"]
 shape = SubResource( 1 )

@@ -39,6 +39,8 @@ func _physics_process(delta):
 	for index in range (get_slide_count()):
 		var collision = get_slide_collision(index)
 		var collision_object = collision.collider as CollisionObject
+		if collision_object.collision_layer & 4:
+			get_tree().reload_current_scene()
 
 func setup_jump(length: float, height: float, speed: float):
 	run_speed = speed
